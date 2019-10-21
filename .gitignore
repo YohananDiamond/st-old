@@ -1,0 +1,9 @@
+# All output files
+*.o
+
+# Literally the "st" file, which is the compiled version.
+st
+
+# Swap files, backup files
+*~
+*.swp
