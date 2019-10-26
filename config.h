@@ -9,6 +9,7 @@
 /* Old one:
  * static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
  */
+static char *font = "Cascadia Code:pixelsize=14.5:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
