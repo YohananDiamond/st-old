@@ -9,8 +9,8 @@
 /* Old one:
  * static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
  */
-static char *font = "Cascadia Code:pixelsize=14.5:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Cascadia Code:pixelsize=14:antialias=true:autohint=true";
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -88,29 +88,40 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+    /* black, red, green, yellow, blue, magenta, cyan, gray */
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#282c34",
+	"#e06c75",
+	"#98c379",
+	"#e5c07b",
+	"#61afef",
+	"#c678dd",
+	"#56b6c2",
+	"#abb2bf",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#282c34",
+	"#e06c75",
+	"#98c379",
+	"#e5c07b",
+	"#61afef",
+	"#c678dd",
+	"#56b6c2",
+	"#abb2bf",
+	/* "#5c6370", */
+	/* "#be5046", */
+	/* "#7a9f60", */
+	/* "#d19a66", */
+	/* "#3b84c0", */
+	/* "#9a52af", */
+	/* "#3c909b", */
+	/* "#828997", */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
+    "#abb2bf", /* foreground */
+    "#282c34", /* background */
 	"#cccccc",
 	"#555555",
 };
@@ -120,10 +131,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+static unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 259;
 
 /*
  * Default shape of cursor
@@ -192,8 +203,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 };
 
-/*
- * Special keys (change & recompile st.info accordingly)
+/* Special keys (change & recompile st.info accordingly)
  *
  * Mask value:
  * * Use XK_ANY_MOD to match the key no matter modifiers state
