@@ -6,8 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 
-/* Old one:
- * static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+/*
+ * Font Config
  */
 static char *font = "Cascadia Code:pixelsize=14.5:antialias=true:autohint=true";
 static int borderpx = 0;
@@ -88,42 +88,35 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-    /* black, red, green, yellow, blue, magenta, cyan, gray */
-	/* 8 normal colors */
-	"#282c34",
-	"#e06c75",
-	"#98c379",
-	"#e5c07b",
-	"#61afef",
-	"#c678dd",
-	"#56b6c2",
-	"#abb2bf",
+    /* Order: black red green yellow blue magenta cyan white */
 
-	/* 8 bright colors */
-	"#282c34",
-	"#e06c75",
-	"#98c379",
-	"#e5c07b",
-	"#61afef",
-	"#c678dd",
-	"#56b6c2",
-	"#abb2bf",
-	/* "#5c6370", */
-	/* "#be5046", */
-	/* "#7a9f60", */
-	/* "#d19a66", */
-	/* "#3b84c0", */
-	/* "#9a52af", */
-	/* "#3c909b", */
-	/* "#828997", */
+    /* Normal */
+    "#3B4252",
+    "#BF616A",
+    "#A3BE8C",
+    "#EBCB8B",
+    "#81A1C1",
+    "#B48EAD",
+    "#88C0D0",
+    "#E5E9F0",
 
-	[255] = 0,
+    /* Bright */
+    "#4C566A",
+    "#BF616A",
+    "#A3BE8C",
+    "#EBCB8B",
+    "#81A1C1",
+    "#B48EAD",
+    "#8FBCBB",
+    "#ECEFF4",
 
-	/* more colors can be added after 255 to use with DefaultXX */
-    "#abb2bf", /* foreground */
-    "#282c34", /* background */
-	"#cccccc",
-	"#555555",
+    [255] = 0,
+
+    /* More colors can be added after 255 to use with DefaultXX */
+    "#D8DEE9", /* Foreground */
+    "#2E3440", /* Background */
+    "#cccccc", /* ??? */
+    "#555555", /* ??? */
 };
 
 
